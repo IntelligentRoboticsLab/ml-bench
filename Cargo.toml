@@ -1,0 +1,12 @@
+[package]
+name = "ml-bench"
+version = "0.1.0"
+edition = "2021"
+description = "A benchmarking tool for machine learning models using the OpenVINO runtime."
+
+[dependencies]
+clap = { version = "4.5.20", features = ["derive"] }
+criterion = "0.5.1"
+miette = { version = "7.2.0", features = ["fancy"] }
+openvino = { version = "0.8", features = ["runtime-linking"] }
+thiserror = "1.0.65"
