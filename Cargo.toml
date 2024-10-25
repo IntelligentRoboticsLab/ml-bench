@@ -2,7 +2,20 @@
 name = "ml-bench"
 version = "0.1.0"
 edition = "2021"
-description = "A benchmarking tool for machine learning models using the OpenVINO runtime."
+authors = ["Gijs de Jong <gijs@dutchnaoteam.nl>"]
+description = "A tool for benchmarking inference time of onnx models using the OpenVINO runtime."
+
+[workspace.lints.rust]
+missing_docs = "warn"
+# TODO: replace this lint with cargo-machete, since it's broken
+# https://github.com/rust-lang/rust/issues/57274
+# unused_crate_dependencies = "warn"
+
+[lints.clippy]
+# enable clippy lints with priority -1
+# so that we can override certain ones with "allow"
+all = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
 
 [dependencies]
 clap = { version = "4.5.20", features = ["derive"] }
