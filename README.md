@@ -10,7 +10,7 @@ The benchmarks are run using [criterion](https://github.com/bheisler/criterion.r
 ## Usage
 
 ```sh
-./ml-bench <model> [--samples <num_samples>]
+ml-bench <model> [--samples <num_samples>]
 ```
 
 ## Building
