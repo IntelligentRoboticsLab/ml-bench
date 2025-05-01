@@ -1,6 +1,6 @@
 [package]
 name = "ml-bench"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 authors = ["Gijs de Jong <gijs@dutchnaoteam.nl>"]
 description = "A tool for benchmarking inference time of onnx models using the OpenVINO runtime."
@@ -21,4 +21,6 @@ pedantic = { level = "warn", priority = -1 }
 clap = { version = "4.5.26", features = ["derive"] }
 criterion = "0.5.1"
 miette = { version = "7.2.0", features = ["fancy"] }
-openvino = { version = "0.8", features = ["runtime-linking"] }
+openvino = { git = "https://github.com/Rickvanderveen/openvino-rs.git", rev = "eef188a4f0fd52020bfe95822ead35f37ee4efaf", features = [
+  "runtime-linking",
+] }
