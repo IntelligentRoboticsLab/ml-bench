@@ -1,6 +1,6 @@
 use std::path::Path;
 
-use criterion::{black_box, Criterion};
+use criterion::Criterion;
 use miette::{miette, Context, IntoDiagnostic, Result};
 use openvino::CompiledModel;
 
@@ -30,7 +30,7 @@ pub fn run_benchmark_onnx(path: impl AsRef<Path>, c: &mut Criterion) -> Result<(
                 .create_infer_request()
                 .expect("failed to create inference request");
 
-            black_box(request)
+            std::hint::black_box(request)
                 .infer()
                 .expect("failed to complete inference");
         });
