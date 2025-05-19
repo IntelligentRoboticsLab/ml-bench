@@ -21,12 +21,15 @@ fn main() -> miette::Result<()> {
 
     let model_path = args.model_path;
     if !model_path.exists() {
-        eprintln!("Model file not found: {model_path:?}");
+        eprintln!("Model file not found: {}", model_path.display());
         std::process::exit(1);
     }
 
     let Some(model_path_str) = model_path.to_str() else {
-        eprintln!("Model file path is not valid UTF-8: {model_path:?}");
+        eprintln!(
+            "Model file path is not valid UTF-8: {}",
+            model_path.display()
+        );
         std::process::exit(1);
     };
 

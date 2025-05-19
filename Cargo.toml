@@ -18,9 +18,9 @@ all = { level = "warn", priority = -1 }
 pedantic = { level = "warn", priority = -1 }
 
 [dependencies]
-clap = { version = "4.5.26", features = ["derive"] }
-criterion = "0.5.1"
-miette = { version = "7.2.0", features = ["fancy"] }
+clap = { version = "4.5.38", features = ["derive"] }
+criterion = "0.6.0"
+miette = { version = "7.6.0", features = ["fancy"] }
 openvino = { git = "https://github.com/Rickvanderveen/openvino-rs.git", rev = "eef188a4f0fd52020bfe95822ead35f37ee4efaf", features = [
   "runtime-linking",
 ] }
